@@ -151,6 +151,19 @@ class DoublyLinkedList {
       }
       return this;
   }
+
+  findIndex(val) {
+    if(!this.head) return undefined;
+
+    let current = this.head;
+    let index = 0;
+    while(current) {
+      if(current.value === val) return index;
+      index++;
+      current = current.next;
+    }
+    return undefined;
+  }
 }
 
 const dll = new DoublyLinkedList();
